@@ -42,9 +42,9 @@ function App() {
   const { data, loading, error, handleCancelRequest } = useFetch(
     "https://jsonplaceholder.typicode.com/users"
   );
-  console.log({ data });
+
   return (
-    <div className="App">
+    <div className="AppUsers">
       <h1>API users</h1>
       <button onClick={handleCancelRequest}>Cancel Request</button>
       <div>

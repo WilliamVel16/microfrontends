@@ -13,9 +13,9 @@ function App() {
                 <ul>
                     { error && <li>Error: {error}</li>}
                     { loading && <li>Loading...</li>}
-                    { data?.map((user) => (
+                   {/** { data?.map((user) => (
                         <li key={user.id}> {user.name} </li>
-                    )) }
+                    )) }*/ }
                 </ul>
             </div>
         </div>
