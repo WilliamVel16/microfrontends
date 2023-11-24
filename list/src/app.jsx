@@ -11,22 +11,31 @@ import Typography from "@mui/material/Typography";
 
 const cardUser = (user) => {
   return (
-    <React.Fragment key={user.id}>
+    <Card key={user.id} sx={{ minWidth: 275, maxWidth: 300 }} >
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        {user.username}
+          {user.username}
         </Typography>
         <Typography variant="h5" component="div">
-        {user.name}
-      </Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-      {user.phone}
-      </Typography>
+          {user.name}
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+          {user.phone}
+        </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" href={user.website.startsWith("http") ? user.website : "http://" + user.website} >Learn More</Button>
+        <Button
+          size="small"
+          href={
+            user.website.startsWith("http")
+              ? user.website
+              : "http://" + user.website
+          }
+        >
+          Learn More
+        </Button>
       </CardActions>
-    </React.Fragment>
+    </Card>
   );
 };
 function App() {
@@ -38,12 +47,11 @@ function App() {
     <div className="App">
       <h1>API users</h1>
       <button onClick={handleCancelRequest}>Cancel Request</button>
-      <div className="card">
-        <ul>
+      <div>
+        <ul className="containerUsers">
           {error && <li>Error: {error}</li>}
           {loading && <li>Loading...</li>}
           {data && data?.map((user) => cardUser(user))}
-    
         </ul>
       </div>
     </div>
