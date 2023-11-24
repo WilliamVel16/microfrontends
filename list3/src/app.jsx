@@ -36,8 +36,11 @@ function App() {
     return (
         <div className="App" >
             <h1>API weather</h1>
+            <button onClick={handleCancelRequest}>
+                Cancel request
+            </button>
             <div>
-                <label htmlFor="citySelect">Choose a city:</label>
+                <label htmlFor="citySelect">Choose a city:  </label>
                 <select id="citySelect" value={city} onChange={handleCityChange}>
                     {cities.map((cityName) => (
                         <option key={cityName} value={cityName}>
