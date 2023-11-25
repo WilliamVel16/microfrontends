@@ -4,7 +4,7 @@ import App from "./app.jsx"
 
 export default function Root(props) {
   return (
-    <section className='section-list'>
+    <section className='section-users'>
       {/* {props.name} is mounted! API 1 */}
       <App />
     </section>

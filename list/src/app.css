@@ -1,12 +1,12 @@
 /* app.css */
-.section-list{
+.section-users{
   text-align: center;
   background-color: #5a7480;
   padding: 20px 20px;
 }
 
-.App {
-  color: #5a7480;
+.App-users {
+  color: #29343d;
   background-color: white;
   border-radius: 40px;
   text-align: center;
@@ -21,7 +21,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.card {
+.card-users {
   text-align: center;
   background-color:  white;
   border-radius: 8px;
@@ -29,7 +29,7 @@ h1 {
   padding: 0;
 }
 
-.ul-card {
+.ul-card-users {
   border: 0;
   text-align: center;
   padding: 0;
@@ -38,6 +38,10 @@ h1 {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(5, 1fr);
+}
+
+.img-users{
+  width: 30px
 }
 
 button {
@@ -58,6 +62,7 @@ button:active {
 }
 
 .individual{
+
   margin:auto;
   width: 75%;
   height: 70%;
