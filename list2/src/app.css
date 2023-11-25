@@ -1,13 +1,12 @@
 /* app.css */
 
-
-.section-list2{
+.section-list2 {
   text-align: center;
-  background-color: #9C67A8;
+  background-color: #9c67a8;
   padding: 20px 20px;
 }
 
-.App-2 {
+.App-albums {
   color: #513557;
   background-color: white;
   border-radius: 40px;
@@ -17,21 +16,20 @@
   margin: 0 auto;
   max-width: 90%;
 }
-  
-  
+
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
 }
-  
-.card {
+
+.card-albums {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
-   
-.ul-card-2 {
+
+.ul-card-albums {
   border-radius: 8px;
   background-color: white;
   border: 0;
@@ -41,40 +39,40 @@ h1 {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(5, 1fr);
 }
- 
-.li-card-2 {
+
+.li-card-albums {
   display: flex;
   align-items: center;
   justify-content: center;
   height: auto;
   margin: 8px;
-  background-color: #9C67A8;
+  background-color: #9c67a8;
   font-weight: bold;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0px 0px 12px 1px #9C67A8;
+  box-shadow: 0px 0px 12px 1px #9c67a8;
+  font-size: larger;
 }
 
-.li-card-2:hover{
-  background-color: #764E7F;
-  color: white;  
- }
-  
-.button-2 {
+.li-card-albums:hover {
+  background-color: #764e7f;
+  color: white;
+}
+
+.button-albums {
   padding: 8px 16px;
-  background-color: #9C67A8;
+  background-color: #9c67a8;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  }
-  
-.button-2:hover {
-  background-color: #764E7F;
+}
+
+.button-albums:hover {
+  background-color: #764e7f;
   color: white;
 }
-  
+
 button:active {
   transform: translateY(1px);
 }
-  
