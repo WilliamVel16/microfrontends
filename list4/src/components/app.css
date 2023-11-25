@@ -1,0 +1,100 @@
+
+.section-posts {
+    text-align: center;
+    background-color: #9E0530;
+    padding: 20px 20px;
+  }
+  
+  .App-posts {
+    color: #9E0530;
+    background-color: white;
+    border-radius: 40px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .card-posts{
+    /* background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 0px #BD063A;
+*/
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+  }
+  
+  .ul-card-posts {
+    border-radius: 8px;
+    background-color: white;
+    border: 0;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .li-card-posts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 8px;
+    background-color: #9E0530;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 12px 1px #9E0530;
+    font-size: larger;
+  }
+  
+  .li-card-posts:hover {
+    background-color: #BD063A;
+    color: white;
+  }
+  
+  .button-posts {
+    padding: 8px 16px;
+    background-color: #9E0530;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button-posts:hover {
+    background-color: #BD063A;
+    color: white;
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  .city-posts{
+    margin: 20px;
+  }
+  
+  .city-select{
+
+    border-radius: 15px;
+  }
+  

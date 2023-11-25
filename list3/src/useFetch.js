@@ -1,37 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-export function useFetch(url) {
-const [data, setData] = useState(null)
-const [loading, setLoading] = useState(true);
-const [error, setError] = useState(null);
-const [controller, setController] = useState(null)
+export function useFetch() {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [controller, setController] = useState(null);
 
-    useEffect(() => {
+    const handleFetch = async (url, options) => {
+        setLoading(true);
         const abortController = new AbortController();
         setController(abortController);
-        setLoading(true);
-        fetch(url, { signal: abortController.signal })
-            .then((response) => response.json())
-            .then((data) => setData(data))
-            .catch((error) => {
-                if(error.name == "AbortError"){
-                    console.log("Request canceled")
-                } else {
-                    setError(error)
-                }
-            })
-            .finally(() => setLoading(false));
-        
-        return () => abortController.abort();
-    }, []);
- 
-    const handleCancelRequest = () => {
-        if(controller){
-            controller.abort();
-            setError("Reques cancelled");
+
+        try {
+            const response = await fetch(url, options, { signal: abortController.signal });
+            const responseData = await response.json();
+            setData(responseData);
+            setError(null);
+        } catch (err) {
+            if (err.name === "AbortError") {
+                console.log("Request canceled");
+            } else {
+                setError(err);
+            }
+        } finally {
+            setLoading(false);
         }
-    }
+    };
 
-    return { data, loading, error, handleCancelRequest }
+    const handleCancelRequest = () => {
+        if (controller) {
+            controller.abort();
+            setError("Request cancelled");
+        }
+    };
+
+    return { data, loading, error, handleFetch, handleCancelRequest };
 }
-

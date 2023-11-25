@@ -76,3 +76,8 @@ button:active {
   background-color: #3C5665;
   color: white;
 }
+
+.MuiPaper-root{
+  flex-basis: 50px;
+  flex-grow: 2;
+}
