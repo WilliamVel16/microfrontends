@@ -12,23 +12,24 @@ import Typography from "@mui/material/Typography";
 const cardUser = (user) => {
   return (
     <React.Fragment key={user.id}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+      <CardContent className="individual">
+        <Typography sx={{ fontSize: 14, fontStyle:'italic'}} gutterBottom>
         {user.username}
         </Typography>
-        <Typography variant="h5" component="div">
+        <Typography sx={{fontWeight: 'bold'}}variant="h5" component="div">
         {user.name}
       </Typography>
       <Typography sx={{ mb: 1.5 }} color="text.secondary">
       {user.phone}
       </Typography>
+      <Button sx={{ color:'white'}} size="small" href={user.website.startsWith("http") ? user.website : "http://" + user.website} >Learn More</Button>
       </CardContent>
-      <CardActions>
-        <Button size="small" href={user.website.startsWith("http") ? user.website : "http://" + user.website} >Learn More</Button>
-      </CardActions>
+
     </React.Fragment>
   );
 };
+
+
 function App() {
   const { data, loading, error, handleCancelRequest } = useFetch(
     "https://jsonplaceholder.typicode.com/users"
@@ -36,18 +37,19 @@ function App() {
   console.log({ data });
   return (
     <div className="App">
-      <h1>API users</h1>
+      <h1>API Usuarios</h1>
       <button onClick={handleCancelRequest}>Cancel Request</button>
       <div className="card">
-        <ul>
+        <ul className="ul-card">
           {error && <li>Error: {error}</li>}
           {loading && <li>Loading...</li>}
           {data && data?.map((user) => cardUser(user))}
-    
         </ul>
+
       </div>
     </div>
   );
 }
+
 
 export default App;
