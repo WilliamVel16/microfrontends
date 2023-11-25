@@ -6,12 +6,11 @@
         v-for="post in posts"
         :key="post.id"
         class="li-card-posts"
-        style="
-          
-        "
+
       >
         <b-card-title
           style="
+          color: #706703;
             margin: 0;
             font-family: Arial, sans-serif;
             font-weight: bold;
@@ -30,7 +29,7 @@
               font-size: small;
               line-height: 1.5;
               letter-spacing: 0.00938em;
-              color: rgba(0, 0, 0, 0.6);
+              color: #706703;
               margin-bottom: 12px;
             "
             >{{ post.body }}</b-card-text

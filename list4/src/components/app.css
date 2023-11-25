@@ -1,12 +1,12 @@
 
 .section-posts {
     text-align: center;
-    background-color: #9E0530;
+    background-color: #9e9205a1;
     padding: 20px 20px;
   }
   
   .App-posts {
-    color: #9E0530;
+    color: #706703;
     background-color: white;
     border-radius: 40px;
     text-align: center;
@@ -24,7 +24,7 @@
   .card-posts{
     /* background-color: white;
     border-radius: 8px;
-    box-shadow: 0 0 5px 0px #BD063A;
+    box-shadow: 0 0 5px 0px #9E924A;
 */
     display: grid;
     grid-template-rows: repeat(10, 1fr);
@@ -51,29 +51,29 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(5, 1fr);
   }
-  
+
   .li-card-posts {
     display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
     margin: 8px;
-    background-color: #9E0530;
+    background-color: #9e9205a1;
     font-weight: bold;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0px 0px 12px 1px #9E0530;
+    box-shadow: 0px 0px 12px 1px #9e9205a1;
     font-size: larger;
   }
   
   .li-card-posts:hover {
-    background-color: #BD063A;
+    background-color: #9E924A;
     color: white;
   }
   
   .button-posts {
     padding: 8px 16px;
-    background-color: #9E0530;
+    background-color: #9e9205a1;
     color: white;
     border: none;
     border-radius: 4px;
@@ -81,7 +81,7 @@
   }
   
   .button-posts:hover {
-    background-color: #BD063A;
+    background-color: #9E924A;
     color: white;
   }
   
@@ -94,7 +94,6 @@
   }
   
   .city-select{
-
     border-radius: 15px;
   }
   
