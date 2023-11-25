@@ -15,7 +15,7 @@ export default function Root(props) {
   return (
     <section style={containerStyle}>
       <div style={cardStyle}>
-        <h2 style={headerStyle}>{props.name} is mounted!</h2>
+        <h2 style={headerStyle}>Welcome</h2>
         <ul style={listStyle}>
           {todos.map((todo) => (
             <li key={todo.id} style={listItemStyle}>
