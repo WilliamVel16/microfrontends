@@ -1,11 +1,19 @@
 /* app.css */
+.section-users{
+  text-align: center;
+  background-color: #5a7480;
+  padding: 20px 20px;
+}
 
-.AppUsers {
+.App-users {
+  color: #29343d;
+  background-color: white;
+  border-radius: 40px;
+  text-align: center;
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
-  width: 100%;
-  max-width: 1000px;
+  max-width: 90%;
 }
 
 h1 {
@@ -13,49 +21,62 @@ h1 {
   margin-bottom: 20px;
 }
 
-.card {
-  background-color: #f9f9f9;
+.card-users {
+  text-align: center;
+  background-color:  white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-ul {
-  list-style: none;
   padding: 0;
 }
 
-li {
-  margin-bottom: 10px;
+.ul-card-users {
+  border: 0;
+  text-align: center;
+  padding: 0;
+  width: auto;
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.img-users{
+  width: 30px
 }
 
 button {
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #5a7480;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #3C5665;
 }
 
 button:active {
   transform: translateY(1px);
 }
-.containerUsers{
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  gap: 10px;
-  background-color: #f9f9f9;
-  justify-content: space-evenly;
-  padding: 10px;
-  width: 98%;
+
+.individual{
+
+  margin:auto;
+  width: 75%;
+  height: 70%;
+  border-radius: 14%;
+  color: #29343d;
+  background-color: #5a7480;
+  box-shadow: 0px 0px 10px 1px #5a7480;
 }
+
+.individual:hover{
+  background-color: #3C5665;
+  color: white;
+}
+
 .MuiPaper-root{
   flex-basis: 50px;
   flex-grow: 2;

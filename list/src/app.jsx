@@ -11,51 +11,46 @@ import Typography from "@mui/material/Typography";
 
 const cardUser = (user) => {
   return (
-    <Card key={user.id} sx={{ minWidth: 275, maxWidth: 300 }} >
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          {user.username}
+    <React.Fragment key={user.id}>
+      <CardContent className="individual">
+      <img className="img-users" src="https://i.ibb.co/xqtxtDq/usuario-2.png" alt="img profile" />
+      <Typography sx={{fontWeight: 'bold'}}variant="h5" component="div">
+        {user.name}
+      </Typography>
+      <Typography sx={{ fontSize: 14, fontStyle:'italic'}} gutterBottom>
+        {user.username}
         </Typography>
-        <Typography variant="h5" component="div">
-          {user.name}
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          {user.phone}
-        </Typography>
+      <Typography sx={{fontSize: 13, mb: 1.5 }} color="text.secondary">
+      {user.phone}
+      </Typography>
+      <Button sx={{ color:'white'}} size="small" href={user.website.startsWith("http") ? user.website : "http://" + user.website} >Learn More</Button>
       </CardContent>
-      <CardActions>
-        <Button
-          size="small"
-          href={
-            user.website.startsWith("http")
-              ? user.website
-              : "http://" + user.website
-          }
-        >
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
+
+    </React.Fragment>
   );
 };
+
+
 function App() {
   const { data, loading, error, handleCancelRequest } = useFetch(
     "https://jsonplaceholder.typicode.com/users"
   );
 
   return (
-    <div className="AppUsers">
-      <h1>API users</h1>
+    <div className="App-users">
+      <h1>API Users</h1>
       <button onClick={handleCancelRequest}>Cancel Request</button>
-      <div>
-        <ul className="containerUsers">
+      <div className="card-users">
+        <ul className="ul-card-users">
           {error && <li>Error: {error}</li>}
           {loading && <li>Loading...</li>}
           {data && data?.map((user) => cardUser(user))}
         </ul>
+
       </div>
     </div>
   );
 }
+
 
 export default App;

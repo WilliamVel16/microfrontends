@@ -1,12 +1,13 @@
 <template>
-  <section>
-    @wvelorg/list4 is mounted! API 4
+  <section class="section-posts">
+    <!-- @wvelorg/list4 is mounted! API 4 -->
     <ApiC />
   </section>
 </template>
 
 <script>
 import ApiC from "./components/ApiC.vue";
+import "./components/app.css"
 
 export default {
   name: "App",

@@ -34,14 +34,14 @@ function App() {
     console.log(city)
 
     return (
-        <div className="App" >
+        <div className="App-weather" >
             <h1>API weather</h1>
-            <button onClick={handleCancelRequest}>
+            <button className="button-weather" onClick={handleCancelRequest}>
                 Cancel request
             </button>
-            <div>
+            <div className="city-weather">
                 <label htmlFor="citySelect">Choose a city:  </label>
-                <select id="citySelect" value={city} onChange={handleCityChange}>
+                <select className="city-select" id="citySelect" value={city} onChange={handleCityChange}>
                     {cities.map((cityName) => (
                         <option key={cityName} value={cityName}>
                             {cityName}
@@ -49,8 +49,8 @@ function App() {
                     ))}
                 </select>
             </div>
-            <div className="card">
-                <ul>
+            <div className="card-weather">
+                <ul className="ul-card-weather">
                     {error && <li>Error: {error}</li>}
                     {loading && <li>Waiting choose...</li>}
                     {data && (
