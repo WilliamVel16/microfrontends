@@ -23,7 +23,7 @@ export class AppComponent {
     const {title} = this.form.value;
 
     const todo: ITodo = {
-      completed: true,
+      completed: false,
       id: storeTodo.id,
       text: title,
     };
