@@ -1,0 +1,116 @@
+<single-spa-router>
+  <!-- This is the single-spa Layout Definition for your microfrontends. See https://single-spa.js.org/docs/layout-definition/ for more information. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background-color: rgb(236, 229, 255); 
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <style>
+    .back-button {
+      text-decoration: none;
+      color: black;
+      font-size: 24px; 
+      margin: 20px; 
+      display: inline-block; 
+    }
+  </style>
+  <main>
+    <route path="/users">
+      <a href="/" class="back-button"><i class="fas fa-home"></i></a>
+      <application name="@wvelorg/list"></application>
+    </route>
+    <route path="/albums">
+      <a href="/" class="back-button"><i class="fas fa-home"></i></a>
+      <application name="@wvelorg/list2"></application>
+    </route>
+    <route path="/weather">
+      <a href="/" class="back-button"><i class="fas fa-home"></i></a>
+      <application name="@wvelorg/list3"></application>
+    </route>
+    <route path="/posts">
+      <a href="/" class="back-button"><i class="fas fa-home"></i></a>
+      <application name="@wvelorg/list4"></application>
+    </route>
+    <route path="/to-do">
+      <a href="/" class="back-button"><i class="fas fa-home"></i></a>
+      <application name="@wvelorg/list5"></application>
+      <application name="@wvelorg/angular"></application> 
+    </route>
+    <route default>
+      <div style="text-align: center; padding: 20px;">
+        <h1>Microfrontends Container</h1>
+        <p>You can access any of them by clicking on:</p>
+
+        <!-- Users -->
+        <div style="display: inline-block; margin: 10px; font-family: Arial">
+          <a href="/users" style="text-decoration: none;">
+            <div style="width: 100px; height: 100px; background-color: lightblue; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <p style="margin: 0; font-weight: bold">Users</p>
+            </div>
+          </a>
+          <div style="display: inline-block; margin: 10px; font-family: Arial">
+            <img src="https://i.imgur.com/iRiltZp.png" alt="Descripción de la imagen" style="width: 50px; height: 50px;">
+          </div>
+        </div>
+
+        <!-- Albums -->
+        <div style="display: inline-block; margin: 10px; font-family: Arial">
+          <a href="/albums" style="text-decoration: none;">
+            <div style="width: 100px; height: 100px; background-color: lightgreen; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <p style="margin: 0; font-weight: bold">Albums</p>
+            </div>
+          </a>
+          <div style="margin-top: 10px;">
+            <img src="https://i.imgur.com/iRiltZp.png" alt="Descripción de la imagen" style="width: 50px; height: 50px;">
+          </div>
+        </div>
+
+        <!-- Wheather -->
+        <div style="display: inline-block; margin: 10px; font-family: Arial">
+          <a href="/weather" style="text-decoration: none;">
+            <div style="width: 100px; height: 100px; background-color: lightcoral; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <p style="margin: 0; font-weight: bold">Wheather</p>
+            </div>
+          </a>
+          <div style="margin-top: 10px;">
+            <img src="https://i.imgur.com/iRiltZp.png" alt="Descripción de la imagen" style="width: 50px; height: 50px;">
+          </div>
+        </div>
+
+        <!-- Posts -->
+        <div style="display: inline-block; margin: 10px; font-family: Arial">
+          <a href="/posts" style="text-decoration: none;">
+            <div style="width: 100px; height: 100px; background-color: lightseagreen; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <p style="margin: 0; font-weight: bold">Posts</p>
+            </div>
+          </a>
+          <div style="margin-top: 10px;">
+            <img src="https://imgur.com/nmlsJyt.png" alt="Descripción de la imagen" style="width: 50px; height: 50px;">
+          </div>
+        </div>
+
+        <!-- To do -->
+        <div style="display: inline-block; margin: 10px; font-family: Arial">
+          <a href="/to-do" style="text-decoration: none;">
+            <div style="width: 100px; height: 100px; background-color: lightpink; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <p style="margin: 0; font-weight: bold">To do</p>
+            </div>
+          </a>
+          <div style="margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+            <img src="https://i.imgur.com/iRiltZp.png" alt="Descripción de la imagen" style="width: 50px; height: 50px;">
+            <p style="margin: 0; margin-left: 5px; margin-right: 5px;">+</p>
+            <img src="https://imgur.com/jWlCdRy.png" alt="Descripción de la imagen" style="width: 50px; height: 50px;">
+          </div>
+        
+      </div>
+    </route>
+  </main>
+</single-spa-router>
+
+
+
+
+
